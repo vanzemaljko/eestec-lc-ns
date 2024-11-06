@@ -24,7 +24,6 @@
     "@contentful/rich-text-html-renderer": "^16.0.2",
     "bulma": "^0.9.4",
     "contentful": "^9.2.17",
-    "firebase": "^9.15.0",
     "lightgallery": "^2.7.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
