@@ -1,0 +1,24 @@
+@import "./../../../../app/custom-theme.scss";
+
+h1 {
+  margin-bottom: 0px;
+}
+
+.pagination-link.is-current {
+  padding: 0px;
+  background-color: $red;
+  border: $red 1px;
+  color: white !important;
+}
+
+.pagination-link {
+  color: $red;
+}
+
+.columns {
+  margin: 0px !important;
+}
+
+::ng-deep .mdc-text-field--filled {
+  background-color: $gray !important;
+}

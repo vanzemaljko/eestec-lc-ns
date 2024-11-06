@@ -1,0 +1,20 @@
+<div class="is-flex is-flex-direction-column stretch-width px-5">
+  <h2>Blog objave...</h2>
+  <div class="my-3" *ngFor="let post of posts.slice(0, 5)">
+    <sidebar-blog-card [post]="post"></sidebar-blog-card>
+  </div>
+  <hr />
+  <h2>O EESTEC-u...</h2>
+  <p>
+    EESTEC je neprofitno, nepolitičko udruženje studenata koje ima za cilj da
+    poveže studente elektrotehnike i računarstva širom Evrope kroz organizovanje
+    međunarodnih seminara, razmena i stručnih praksi. Cilj udruženja je i
+    povezivanje i upoznavanje studenata sa razvojem industrije i modernim
+    trendovima u struci. Udruženje je osnovano 1986. godine u Holandiji i
+    trenutno se sastoji od 54 lokalna komiteta (Local Committee – LC) u 28
+    država širom Evrope.
+  </p>
+  <a [routerLink]="['/about-us']" class="my-5">
+    <button mat-flat-button color="primary">Pročitaj više</button>
+  </a>
+</div>

@@ -1,0 +1,24 @@
+<div
+  class="card-container has-text-centered is-flex is-flex-direction-column is-justify-content-space-between"
+>
+  <img src="{{ boardie.picture.fields.file.url }}" />
+  <div>
+    <h2>{{ boardie.name }}</h2>
+    <h3>{{ boardie.position }}</h3>
+    <p>{{ boardie.email }}</p>
+  </div>
+  <div
+    class="is-flex is-flex-direction-row is-justify-content-space-around mb-5 px-5 mx-5"
+  >
+    <a href="mailto:{{ boardie.email }}">
+      <button mat-mini-fab color="primary" matTooltip="Email">
+        <mat-icon>email</mat-icon>
+      </button></a
+    >
+    <a href="{{ boardie.linkedIn }}" target="_blank">
+      <button mat-mini-fab color="primary" matTooltip="LinkedIn">
+        <mat-icon>share</mat-icon>
+      </button></a
+    >
+  </div>
+</div>

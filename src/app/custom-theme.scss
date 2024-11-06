@@ -1,0 +1,69 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+$application-primary: (
+  default: #e52a30,
+  lighter: #ff655a,
+  darker: #ab0008,
+  text: black,
+  text-light: #ececec,
+);
+
+$application-accent: (
+  default: #e57373,
+  lighter: #ffa4a2,
+  darker: #af4448,
+  text: #000,
+  text-light: #e2e4f8,
+);
+
+$application-warn: mat.define-palette(mat.$red-palette, 600, 500, 800);
+
+$application-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $application-primary,
+      accent: $application-accent,
+      warn: $application-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($application-theme);
+
+:root {
+  --default-background: #141414;
+  --text-color: #fff;
+  --alternative-text: #ececec;
+  --red-on-bg: #ff655a;
+  --red-bg: #a02921;
+  --red: #e52a30;
+  --darker-text: rgba(255, 255, 255, 0.603);
+  --line: #c9c9c9;
+  --gray-bg: #242424;
+  --gray: #a5a5a5;
+}
+
+.light-theme {
+  --default-background: #e7e7e7;
+  --text-color: rgb(0, 0, 0);
+  --alternative-text: #1d1d1d;
+  --red-on-bg: #ab0008;
+  --red-bg: #c78b87;
+  --red: #e52a30;
+  --darker-text: rgba(119, 119, 119, 0.6);
+  --line: #5e5e5e;
+  --gray-bg: #cecece;
+  --gray: #cacaca;
+}
+
+$default-background: var(--default-background);
+$text-color: var(--text-color);
+$alternative-text: var(--alternative-text);
+$darker-text: var(--darker-text);
+$red-on-bg: var(--red-on-bg);
+$line: var(--line);
+$red-bg: var(--red-bg);
+$gray-bg: var(--gray-bg);
+$red: var(--red);
+$gray: var(--gray);

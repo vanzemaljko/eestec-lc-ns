@@ -1,0 +1,56 @@
+@import "./../../../../../app/custom-theme.scss";
+
+.container {
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: $gray-bg;
+  border-radius: 10px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover img {
+    -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%)
+      hue-rotate(-50deg) saturate(200%);
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+      saturate(500%);
+  }
+}
+
+.post-content {
+  max-height: 150px;
+  overflow: hidden;
+}
+
+h2 {
+  color: $red-on-bg;
+  margin-bottom: 0px;
+}
+
+h3 {
+  color: $red;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  z-index: 100;
+  transition: all 0.3s;
+}
+
+.gradient {
+  border-radius: 10px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 30px;
+  right: 0px;
+  z-index: 99;
+  background: linear-gradient(transparent, transparent, transparent, $gray-bg);
+}

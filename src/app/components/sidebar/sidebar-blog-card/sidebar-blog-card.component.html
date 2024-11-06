@@ -1,0 +1,15 @@
+<a routerLink="/post/{{ post.urlHandle }}">
+  <div class="strech-width clickable card-container">
+    <div class="fill stretch-width stretch-height">
+      <img src="{{ post.featuredImage.fields.file.url }}" />
+    </div>
+
+    <div class="gradient"></div>
+
+    <div
+      class="title is-flex is-flex-direction-column is-justify-content-center p-5"
+    >
+      <h1>{{ post.title }}</h1>
+    </div>
+  </div>
+</a>

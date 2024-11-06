@@ -1,0 +1,64 @@
+<div class="basic-page">
+  <div class="max-width-1200 auto-margin">
+    <div class="columns">
+      <div class="column">
+        <div class="columns">
+          <div class="column is-flex is-flex-direction-row px-5">
+            <h1>Blog</h1>
+          </div>
+          <div
+            class="column is-flex is-flex-direction-row is-justify-content-end px-5"
+          >
+            <div>
+              <mat-form-field class="example-full-width">
+                <input
+                  type="tel"
+                  matInput
+                  placeholder="Pretraži blog..."
+                  [(ngModel)]="text"
+                  (keydown)="performSearchKey($event)"
+                />
+                <mat-icon matSuffix (click)="performSearch()">search</mat-icon>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <mat-spinner class="auto-margin my-5" *ngIf="loading"></mat-spinner>
+        <div *ngIf="!loading">
+          <p *ngIf="filteredPosts.length == 0">
+            Nema objava koje odgovaraju pretrazi.
+          </p>
+          <div *ngFor="let post of displayPosts" class="my-5 px-3">
+            <blog-card [post]="post"></blog-card>
+          </div>
+        </div>
+
+        <div class="auto-margin my-5 breadcrumb" *ngIf="maxPages > 1">
+          <nav class="pagination" role="navigation">
+            <div class="auto-margin">
+              <ul class="pagination-list">
+                <li *ngIf="currentPage != 0" (click)="prevPage()">
+                  <a class="pagination-link pl-3 mx-2"
+                    ><mat-icon>skip_previous</mat-icon></a
+                  >
+                </li>
+                <li>
+                  <a class="pagination-link is-current mx-2">{{
+                    currentPage + 1
+                  }}</a>
+                </li>
+                <li *ngIf="currentPage + 1 < maxPages" (click)="nextPage()">
+                  <a class="pagination-link mx-2"
+                    ><mat-icon>skip_next</mat-icon></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="column is-3"><sidebar></sidebar></div>
+    </div>
+  </div>
+</div>

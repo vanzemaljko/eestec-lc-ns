@@ -1,0 +1,64 @@
+@import "./../../../../app/custom-theme.scss";
+
+mat-chip {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.chips {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: $red;
+}
+
+.mat-mdc-standard-chip {
+  background-color: $red-bg !important;
+}
+
+::ng-deep .mdc-evolution-chip__text-label {
+  color: white !important;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.featured-image img {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.square-image {
+  width: 33.33333%;
+  display: inline-block;
+}
+
+::ng-deep youtube-player {
+  display: flex !important;
+  width: 80% !important;
+  margin: auto !important;
+
+  @media (max-width: 425px) {
+    margin-left: -20px !important;
+    transform: scale(0.7);
+    width: 95% !important;
+    margin: 0px;
+  }
+}
+
+.columns {
+  margin: 0px !important;
+}

@@ -1,0 +1,50 @@
+<div class="basic-page">
+  <div class="max-width-1200 auto-margin">
+    <div class="columns">
+      <div class="column px-5">
+        <div class="columns">
+          <div
+            class="column is-flex is-flex-direction-column is-justify-content-space-between"
+          >
+            <h1>{{ post.title }}</h1>
+            <h2>{{ post.dateCreated | date }}</h2>
+            <div class="chips">
+              <mat-chip *ngFor="let tag of post.tags" color="primary">
+                {{ tag }}
+              </mat-chip>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="featured-image">
+              <img src="{{ post.featuredImage.fields.file.url }}" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-5 pt-5"
+          [innerHtml]="returnHtmlFromRichText(post.content)"
+        ></div>
+
+        <div class="my-5" *ngIf="post.youTubeEmbed != undefined">
+          <youtube-player [videoId]="post.youTubeEmbed"> </youtube-player>
+        </div>
+
+        <div class="my-5" *ngIf="post.gallery != undefined">
+          <lightgallery [settings]="settings">
+            <a
+              href="{{ image.fields.file.url }}"
+              *ngFor="let image of post.gallery"
+            >
+              <div class="square-image">
+                <square-image imgSrc="{{ image.fields.file.url }}">
+                </square-image>
+              </div>
+            </a>
+          </lightgallery>
+        </div>
+      </div>
+      <div class="column is-3"><sidebar></sidebar></div>
+    </div>
+  </div>
+</div>

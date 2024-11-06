@@ -1,2 +1,2 @@
 # eestec-lc-ns
-Official EESTEC LC Novi Sad website.
+EESTEC LC Novi Sad Website Angular

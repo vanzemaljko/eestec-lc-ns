@@ -1,0 +1,18 @@
+<a routerLink="/post/{{ this.post.urlHandle }}">
+  <div class="stretch-width container clickable">
+    <div class="columns">
+      <div class="column is-4">
+        <img src="{{ post.featuredImage.fields.file.url }}" />
+      </div>
+      <div class="column">
+        <div class="gradient"></div>
+        <h2>{{ post.title }}</h2>
+        <h3>{{ post.dateCreated | date }}</h3>
+        <div
+          class="post-content"
+          [innerHtml]="returnHtmlFromRichText(post.content)"
+        ></div>
+      </div>
+    </div>
+  </div>
+</a>

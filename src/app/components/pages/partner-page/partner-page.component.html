@@ -1,0 +1,62 @@
+<div class="basic-page">
+  <div class="max-width-1200 auto-margin">
+
+    <mat-spinner
+      class="auto-margin m-5"
+      *ngIf="partner.name == ''"
+    ></mat-spinner>
+
+    <div class="p-2">
+      <div
+        class="card-dontainer max-width-1200 auto-margin my-5"
+        *ngIf="partner.name != ''"
+      >
+        <div class="columns">
+          <div class="column">
+            <div class="is-flex is-flex-direction-column is-align-items-start">
+              <h2>
+                {{ partner.name }}
+              </h2>
+              <a href="{{ partner.website }}" target="_blank" class="mb-5">
+                <button mat-flat-button color="primary" class="call-to-action">
+                  Poseti vebsajt
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="column is-4 is-flex is-flex-direction-column is-justify-content-center p-5 logo"
+          >
+            <img
+              src="{{ partner.logo.fields.file.url }}"
+              [class.invert]="theme == 'dark'"
+            />
+          </div>
+        </div>
+        <div>
+          <h2>Opis</h2>
+          <div [innerHtml]="returnHtmlFromRichText(partner.description)"></div>
+        </div>
+
+        <hr />
+
+        <div>
+          <h2 class="mb-5">Galerija</h2>
+          <div>
+            <lightgallery [settings]="settings">
+              <a
+                *ngFor="let image of partner.gallery"
+                [href]="image.fields.file.url"
+              >
+                <div class="square-image">
+                  <square-image [imgSrc]="image.fields.file.url">
+                  </square-image>
+                </div>
+              </a>
+            </lightgallery>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

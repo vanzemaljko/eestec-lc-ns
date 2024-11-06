@@ -1,0 +1,63 @@
+<div class="basic-page">
+  <div class="max-width-1200 auto-margin px-5">
+    <h1>Kontakt</h1>
+    <div class="has-text-centered">
+      <h2 class="mb-5 pb-5">Izvršni odbor</h2>
+    </div>
+
+    <div class="boardies auto-margin">
+      <mat-spinner
+        class="auto-margin"
+        *ngIf="boardies.length == 0"
+      ></mat-spinner>
+
+      <div *ngIf="boardies.length > 0" class="boardies">
+        <div class="boardie" *ngFor="let boardie of boardies">
+          <boardie-card [boardie]="boardie"></boardie-card>
+        </div>
+      </div>
+    </div>
+
+    <div class="has-text-centered mt-5 pt-5">
+      <hr />
+      <h2 class="mb-5 pb-5">Kontaktni podaci</h2>
+      <div class="columns auto-margin max-width-1200">
+        <div
+          class="contact-box column is-flex is-flex-direction-column is-justify-content-space-around"
+        >
+          <h4 class="mb-5">
+            Udruženje studenata elektrotehnike Evrope<br /><i>
+              (Electrical Engineering STudents’ European assoCiation)</i
+            >
+          </h4>
+          <p>
+            <strong>Adresa: </strong>Trg Dositeja Obradovića 6 , Fakultet
+            tehničkih nauka, Novi Sad 21000
+          </p>
+          <p><strong>Kontakt telefon #1:</strong> +381 60 333 49 07</p>
+          <p><strong>Kontakt telefon #2:</strong> +381 60 333 49 08</p>
+          <p>
+            Ukoliko želite da budete obavešteni o budućim razmenama, događajima
+            , pošaljite mejl na
+            <a href="mailto:novisad@eestec.net">novisad@eestec.net</a> sa vašim
+            informacijama (ime i prezime, smer i godina, mejl adresa) ili
+            posetite našu kancelariju koja se nalazi na Fakultetu tehničkih
+            nauka, pored studentske službe.
+          </p>
+        </div>
+
+        <div class="column map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2809.083651561189!2d19.849508115550226!3d45.24610117909902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b100d462acd9f%3A0x6c6724453c8b1fc6!2sFaculty%20of%20Technical%20Sciences!5e0!3m2!1sen!2srs!4v1676048636304!5m2!1sen!2srs"
+            width="100%"
+            height="100%"
+            style="border-radius: 10px; min-height: 300px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

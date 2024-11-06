@@ -1,0 +1,240 @@
+<div class="welcome-page">
+  <div class="transparent-header">
+    <div
+      class="stretch-width welcome is-flex is-flex-direction-column is-justify-content-center"
+    >
+      <div class="welcome-gradient"></div>
+      <div class="welcome-bg"></div>
+      <div
+        class="is-flex is-flex-direction-row is-align-items-center is-justify-content-space-between columns welcome-wide welcome-content"
+      >
+        <div class="column is-2"></div>
+        <div
+          class="column is-flex is-align-items-start is-flex-direction-column"
+        >
+          <h1>Travel.</h1>
+          <h1>Connect.</h1>
+          <h1>Improve.</h1>
+        </div>
+        <div class="column"></div>
+        <div class="column is-flex is-align-items-end is-flex-direction-column">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf8DYeUUSuXRk3KEDWXHgVzMDRVq4XikuLUBq6q9eIFNya3yg/viewform"
+            target="_blank"
+          >
+            <button mat-flat-button color="primary" class="button-welcome">
+              Postani naš član!
+            </button>
+          </a>
+        </div>
+
+        <div class="column is-2"></div>
+      </div>
+
+      <div
+        class="welcome-mobile is-flex is-flex-direction-column welcome-content"
+      >
+        <div class="is-flex is-align-items-center is-flex-direction-column">
+          <h1>Travel.</h1>
+          <h1>Connect.</h1>
+          <h1>Improve.</h1>
+        </div>
+
+        <div class="is-flex is-align-items-center is-flex-direction-column">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf8DYeUUSuXRk3KEDWXHgVzMDRVq4XikuLUBq6q9eIFNya3yg/viewform"
+            target="_blank"
+          >
+            <button mat-flat-button color="primary" class="button-welcome">
+              Postani naš član!
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns auto-margin max-width-1200 featured-section">
+    <div class="column featured">
+      <h2>PROPUTUJTE EVROPU</h2>
+      <p>
+        Razmene vam omogućavaju da posetite kolege u jednom od 54 lokalna
+        komiteta EESTEC-a širom Evrope. Većina razmena je koncipirana tako da se
+        obrađuje neka tema iz struke, dok u međuvremenu se učesnici druže i
+        razgledaju grad domaćina. Neke razmene, naročito leti ili za vreme
+        manifestacija, nemaju akademski deo, već se baziraju isključivo na
+        druženju.
+      </p>
+    </div>
+
+    <div class="column featured">
+      <h2>OSTVARITE NOVA POZNANSTVA</h2>
+      <p>
+        Mnogo zanimljivih aktivnosti kao i projekata, u toku godine, uoči kojih
+        možete da ostvarite veliki broj poznanstava. Neke od budućih aktivnosti
+        su: roštilji, žurke, bazen, druženje sa stranim članovima, klizanje,
+        laser tag, paint ball, mačevanje… I još mnogo drugih aktivnosti,
+        isključivo sa ciljem širenja pozitivne energije.
+      </p>
+    </div>
+
+    <div class="column featured">
+      <h2>USAVRŠITE SVOJE VEŠTINE</h2>
+      <p>
+        Vreme, energiju i iskustvo posvećujemo volonterskim aktivnosima,
+        podržavamo i promovišemo tehničke inovacije, promovišemo raznolikost
+        evropskih kultura, ohrabrujemo lično usavršavanje, radimo partnerstvo sa
+        organizacijama i institucijama, stvaramo buduće lidere, promovišemo
+        timski duh i rad.
+      </p>
+    </div>
+  </div>
+
+  <h1 class="pt-5 welcome-title">Projekti</h1>
+
+  <div class="columns auto-margin max-width-1200 projets-section">
+    <div class="column">
+      <project-card title="KONTEH" image="konteh.jpg"></project-card>
+    </div>
+
+    <div class="column">
+      <a [routerLink]="['/5-dana-u-oblacima']">
+        <project-card
+          title="5 Dana u Oblacima"
+          image="5danauoblacima.jpg"
+        ></project-card>
+      </a>
+    </div>
+
+    <div class="column">
+      <a [routerLink]="['/ssa']">
+        <project-card title="SSA" image="ssa.jpg"></project-card>
+      </a>
+    </div>
+
+    <div class="column">
+      <a [routerLink]="['/ve-conf']">
+        <project-card title="Ve:Conf" image="veconf.jpg"></project-card>
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="stretch-width is-flex is-flex-direction-column justify-content-center"
+  >
+    <div class="auto-margin">
+      <a [routerLink]="['/projects']">
+        <button mat-flat-button color="primary" class="view-more-button">
+          Pogledaj više
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="is-flex video-section is-justify-content-center is-flex-direction-column video-wide"
+  >
+    <div class="video-gradient"></div>
+    <div class="video-bg"></div>
+    <div
+      class="columns stretch-height stretch-width is-vcentered video-content"
+    >
+      <div class="column is-1"></div>
+      <div
+        class="column stretch-height is-flex is-flex-direction-column is-align-items-center is-justify-content-center px-5"
+      >
+        <h1 class="title-about">Ukratko o nama</h1>
+        <p>
+          Udruženje studenata elektrotehnike Evrope (Electrical Engineering
+          STudents’ European assoCiation) – EESTEC je neprofitno, nepolitičko
+          udruženje studenata koje ima za cilj da poveže studente elektrotehnike
+          i računarstva širom Evrope kroz organizovanje međunarodnih seminara,
+          razmena i stručnih praksi. Cilj udruženja je i povezivanje i
+          upoznavanje studenata sa razvojem industrije i modernim trendovima u
+          struci. Udruženje je osnovano 1986. godine u Holandiji i trenutno se
+          sastoji od 54 lokalna komiteta (Local Committee – LC) u 28 država
+          širom Evrope.
+        </p>
+      </div>
+      <div
+        class="column stretch-height is-flex is-flex-direction-column is-align-items-start is-justify-content-center"
+      >
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/vVQKKUD5_VE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="column is-1"></div>
+    </div>
+  </div>
+
+  <div
+    class="is-flex video-section is-justify-content-center is-flex-direction-column video-mobile"
+  >
+    <div class="video-gradient"></div>
+    <div class="video-bg"></div>
+    <div
+      class="stretch-height is-flex is-flex-direction-column is-align-items-center is-justify-content-center px-5 video-content"
+    >
+      <h1 class="title-about">Ukratko o nama</h1>
+      <p>
+        Udruženje studenata elektrotehnike Evrope (Electrical Engineering
+        STudents’ European assoCiation) – EESTEC je neprofitno, nepolitičko
+        udruženje studenata koje ima za cilj da poveže studente elektrotehnike i
+        računarstva širom Evrope kroz organizovanje međunarodnih seminara,
+        razmena i stručnih praksi. Cilj udruženja je i povezivanje i upoznavanje
+        studenata sa razvojem industrije i modernim trendovima u struci.
+        Udruženje je osnovano 1986. godine u Holandiji i trenutno se sastoji od
+        54 lokalna komiteta (Local Committee – LC) u 28 država širom Evrope.
+      </p>
+    </div>
+    <div
+      class="stretch-height is-flex is-flex-direction-column is-align-items-start is-justify-content-center mt-5 video-content"
+    >
+      <iframe
+        width="80%"
+        height="300px"
+        src="https://www.youtube.com/embed/vVQKKUD5_VE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <div
+    class="is-flex is-flex-direction-row is-justify-content-space-between is-align-items-center stretch-wisth blog-title-section blog-wide"
+  >
+    <h1 class="blog-title">Blog</h1>
+    <a href="/blog">
+      <button mat-flat-button color="primary" class="view-more-button-blog">
+        Pročitaj više
+      </button>
+    </a>
+  </div>
+
+  <div
+    class="is-flex is-flex-direction-row is-justify-content-space-around is-align-items-center stretch-wisth blog-title-section blog-mobile"
+  >
+    <h1 class="blog-title">Blog</h1>
+    <a href="/blog">
+      <button mat-flat-button color="primary" class="view-more-button-blog">
+        Pročitaj više
+      </button>
+    </a>
+  </div>
+
+  <div class="blog-posts">
+    <div class="columns stretch-width is-gapless">
+      <div class="column" *ngFor="let post of blogPosts.slice(0, 5)">
+        <blog-post-card [post]="post"></blog-post-card>
+      </div>
+    </div>
+  </div>
+</div>

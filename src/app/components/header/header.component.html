@@ -1,0 +1,162 @@
+<div
+  class="header-container wide-menu is-flex is-flex-direction-row is-justify-content-space-between py-5 is-align-items-center"
+>
+  <div class="logo-container">
+    <a [routerLink]="'/'">
+      <img
+        class="logo clickable"
+        [class.invert]="theme != 'dark'"
+        src="../../../assets/whiteLogo.png"
+      />
+    </a>
+  </div>
+
+  <div class="is-flex is-flex-direction-row">
+    <div class="navbar-container">
+      <a
+        class="navigation-item"
+        [ngClass]="{ selected: tab == 1 }"
+        [routerLink]="['/about-us']"
+      >
+        O nama
+      </a>
+      <a
+        class="navigation-item"
+        [ngClass]="{ selected: tab == 2 }"
+        [routerLink]="['/blog']"
+      >
+        Blog
+      </a>
+      <a
+        class="navigation-item"
+        [ngClass]="{ selected: tab == 3 }"
+        [routerLink]="['/partners']"
+      >
+        Partneri
+      </a>
+      <a
+        class="navigation-item"
+        [ngClass]="{ selected: tab == 4 }"
+        [routerLink]="['/projects']"
+      >
+        Projekti
+      </a>
+      <a
+        class="navigation-item"
+        [ngClass]="{ selected: tab == 5 }"
+        [routerLink]="['/contact']"
+      >
+        Kontakt
+      </a>
+    </div>
+  </div>
+
+  <mat-button-toggle-group
+    name="theme"
+    class="theme-toggle"
+    [(ngModel)]="theme"
+    (change)="switchTheme()"
+  >
+    <mat-button-toggle value="light"
+      ><mat-icon>flash_on</mat-icon></mat-button-toggle
+    >
+    <mat-button-toggle value="dark"
+      ><mat-icon>flash_off</mat-icon></mat-button-toggle
+    >
+  </mat-button-toggle-group>
+
+  <a href="https://wiki.eestecns.org/" target="_blank" *ngIf="displayWiki">
+    <button mat-flat-button color="primary" class="wiki-button">Wiki</button>
+  </a>
+</div>
+
+<div
+  class="mobile-menu header-container-mobile is-flex is-justify-content-space-between"
+>
+  <a [routerLink]="['/']">
+    <img
+      class="logo clickable"
+      src="../../../assets/whiteLogo.png"
+      [class.invert]="theme != 'dark'"
+    />
+  </a>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <div class="navbar-container mat-menu">
+      <div class="my-5">
+        <a
+          class="navigation-item"
+          [ngClass]="{ selected: tab == 1 }"
+          [routerLink]="['/about-us']"
+        >
+          O nama
+        </a>
+      </div>
+      <div class="my-5">
+        <a
+          class="navigation-item"
+          [ngClass]="{ selected: tab == 2 }"
+          [routerLink]="['/blog']"
+        >
+          Blog
+        </a>
+      </div>
+      <div class="my-5">
+        <a
+          class="navigation-item"
+          [ngClass]="{ selected: tab == 3 }"
+          [routerLink]="['/partners']"
+        >
+          Partneri
+        </a>
+      </div>
+      <div class="my-5">
+        <a
+          class="navigation-item"
+          [ngClass]="{ selected: tab == 4 }"
+          [routerLink]="['/projects']"
+        >
+          Projekti
+        </a>
+      </div>
+      <div class="my-5">
+        <a
+          class="navigation-item"
+          [ngClass]="{ selected: tab == 5 }"
+          [routerLink]="['/contact']"
+        >
+          Kontakt
+        </a>
+      </div>
+    </div>
+    <div
+      class="is-flex is-flex-direction-row is-justify-content-space-around my-5"
+    >
+      <mat-button-toggle-group
+        name="theme"
+        class="theme-toggle"
+        [(ngModel)]="theme"
+        (change)="switchTheme()"
+      >
+        <mat-button-toggle value="light"
+          ><mat-icon>flash_on</mat-icon></mat-button-toggle
+        >
+        <mat-button-toggle value="dark"
+          ><mat-icon>flash_off</mat-icon></mat-button-toggle
+        >
+      </mat-button-toggle-group>
+    </div>
+    <div
+      class="is-flex is-flex-direction-row is-justify-content-space-around my-5"
+    >
+      <a href="https://wiki.eestecns.org/" target="_blank" *ngIf="displayWiki">
+        <button mat-flat-button color="primary" class="wiki-button">
+          Wiki
+        </button>
+      </a>
+    </div>
+  </mat-menu>
+</div>
